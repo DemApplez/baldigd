@@ -1,0 +1,28 @@
+Dem Apples' Personal Checklist Of Features And In The Order They Should Be Completed
+
+"+" Feature is added and complete
+"-" Feature is being worked on either currently or next
+"x" Feature has not had any work started on it
+
++ Hallway layout
+- Room Layout
+- Continue Working On Entrances
+x Get Doors To Function
+x Get Double Doors To Function
+x Get Furniture Models/Meshes To Work
+x Hallway Polish
+x Room Polish
+x Get Skybox To Work
+x Make Collectable Notebooks
+x Prevent Player From Leaving The Beginning Area Until They Collect 2 Notebooks
+x Make Collectable Items Appear Around Map
+x Work On Making Scripts For Exits To Appear And Disappear
+x Work On A Test AI
+x Work On Getting Baldi To Move Around
+x Create Anger System That Increases Whenever A Notebook Is Collected
+x Work On YOU CAN THINK PAD UI And "Minigame"
+x Make Baldi Be Able To Get You
+x Make Game Over Screen
+x Make Principal Of The Thing 
+x Make Playtime
+x Make 1st Prize
