@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3yd8dx57uig7"]
+
+[ext_resource type="Script" path="res://Scripts/MenuController.gd" id="1_ksj36"]
+[ext_resource type="Texture2D" uid="uid://da0mjvxslucrb" path="res://Assets/Texture2D/MenuTextures/title_final.png" id="1_ta54d"]
+[ext_resource type="Theme" uid="uid://begkbmohejwcv" path="res://Themes/DefaultButton.tres" id="2_a7hhp"]
+[ext_resource type="AudioStream" uid="uid://ct17dmsdc0wkg" path="res://Assets/AudioClip/Music/mus_Intro.wav" id="3_r0yme"]
+[ext_resource type="AudioStream" uid="uid://rktjm07wumdd" path="res://Assets/AudioClip/Characters/Baldi/BAL_MainMenu.wav" id="5_wxqye"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_ksj36")
+
+[node name="MainTitle" type="Node2D" parent="."]
+
+[node name="WhiteBG" type="ColorRect" parent="MainTitle"]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TitleFinal" type="Sprite2D" parent="MainTitle"]
+position = Vector2(176, 0)
+scale = Vector2(1.35, 1.35)
+texture = ExtResource("1_ta54d")
+offset = Vector2(320, 240)
+
+[node name="StartButton" type="Button" parent="MainTitle"]
+offset_left = 536.0
+offset_top = 584.0
+offset_right = 680.0
+offset_bottom = 648.0
+theme = ExtResource("2_a7hhp")
+text = "START"
+
+[node name="Menubutton" type="Button" parent="MainTitle"]
+offset_left = 896.0
+offset_top = 584.0
+offset_right = 1024.0
+offset_bottom = 648.0
+theme = ExtResource("2_a7hhp")
+text = "MENU
+"
+
+[node name="IntroMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r0yme")
+autoplay = true
+
+[node name="BaldiTitle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wxqye")
+autoplay = true
+
+[connection signal="pressed" from="MainTitle/StartButton" to="." method="_on_start_button_pressed"]

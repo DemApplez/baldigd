@@ -1,0 +1,1283 @@
+[gd_scene load_steps=124 format=3 uid="uid://dy2vrlm7gj1e0"]
+
+[ext_resource type="AudioStream" uid="uid://dvmetxhpertwd" path="res://Assets/AudioClip/Music/mus_School.wav" id="1_igjfl"]
+[ext_resource type="Texture2D" uid="uid://e6xtp1w4yoj4" path="res://Assets/Texture2D/SchoolHouse/FloorTextures/TileFloor.png" id="1_sf7w1"]
+[ext_resource type="Texture2D" uid="uid://byor2t18p1vqs" path="res://Assets/Texture2D/SchoolHouse/Ceiling.png" id="2_gtf7l"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="2_qm1ke"]
+[ext_resource type="Texture2D" uid="uid://bkwetnruott8c" path="res://Assets/Texture2D/SchoolHouse/WallTextures/WhiteBrickWall.png" id="3_yy1ug"]
+[ext_resource type="Texture2D" uid="uid://bp1d2w4pdrcao" path="res://Assets/Texture2D/SchoolHouse/Billboards/ExitSign.png" id="5_a73jd"]
+[ext_resource type="Script" path="res://Scripts/BaldiTutor.gd" id="6_2oibd"]
+[ext_resource type="Texture2D" uid="uid://bmhbe72y2rrgu" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0000.png" id="6_evg0w"]
+[ext_resource type="Texture2D" uid="uid://du6mdhn1io770" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0001.png" id="7_ck435"]
+[ext_resource type="Texture2D" uid="uid://dphxouxpeu0m2" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0002.png" id="8_gxccv"]
+[ext_resource type="Texture2D" uid="uid://bs24tib3jt7kl" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0003.png" id="9_1n6ol"]
+[ext_resource type="Texture2D" uid="uid://pfm6kwgwfgjy" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0004.png" id="10_4c8ly"]
+[ext_resource type="Texture2D" uid="uid://bl17ms4t1v8ti" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0005.png" id="11_wt6lc"]
+[ext_resource type="Texture2D" uid="uid://cm7vhrrfatke2" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0006.png" id="12_pwnml"]
+[ext_resource type="Texture2D" uid="uid://dp8yamb03nowy" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0007.png" id="13_jqy1e"]
+[ext_resource type="Texture2D" uid="uid://0wruxnprtyvx" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0008.png" id="14_wam05"]
+[ext_resource type="Texture2D" uid="uid://bfidlujbshuhm" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0009.png" id="15_e8w2x"]
+[ext_resource type="Texture2D" uid="uid://do05dhljpnr2g" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0010.png" id="16_3cqrd"]
+[ext_resource type="Texture2D" uid="uid://dyyp0qe6618tg" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0011.png" id="17_m8htp"]
+[ext_resource type="Texture2D" uid="uid://b6m2611jfiq53" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0012.png" id="18_0poyu"]
+[ext_resource type="Texture2D" uid="uid://dgbu227bff4io" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0013.png" id="19_h0ydc"]
+[ext_resource type="Texture2D" uid="uid://bvps2ftcimkmd" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0014.png" id="20_v434k"]
+[ext_resource type="Texture2D" uid="uid://c1arclb8ixhg7" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0015.png" id="21_br2cg"]
+[ext_resource type="Texture2D" uid="uid://b82qhfuxbd86b" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0016.png" id="22_ajqpl"]
+[ext_resource type="Texture2D" uid="uid://ubqjnbv04im7" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0017.png" id="23_37i54"]
+[ext_resource type="Texture2D" uid="uid://b8l2mcv6dffo" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0018.png" id="24_ddaxo"]
+[ext_resource type="Texture2D" uid="uid://ka0hlns7kkql" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0019.png" id="25_5owld"]
+[ext_resource type="Texture2D" uid="uid://ygo0irmsebx7" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0020.png" id="26_bapud"]
+[ext_resource type="Texture2D" uid="uid://bjhbk0plr4jeb" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0021.png" id="27_xtvai"]
+[ext_resource type="Texture2D" uid="uid://dr4q22aj4s2ow" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0022.png" id="28_uilq6"]
+[ext_resource type="Texture2D" uid="uid://bvmwa8fiidhn0" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0023.png" id="29_miahk"]
+[ext_resource type="Texture2D" uid="uid://bb58q7bddd35f" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0024.png" id="30_a54xo"]
+[ext_resource type="Texture2D" uid="uid://cnq8h5kvk8eii" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0025.png" id="31_4twpp"]
+[ext_resource type="Texture2D" uid="uid://ugbvtoak112" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0026.png" id="32_g4jvl"]
+[ext_resource type="Texture2D" uid="uid://cihvn038u7l0t" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0027.png" id="33_0i5v5"]
+[ext_resource type="Texture2D" uid="uid://wsmvxs5nbysv" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0028.png" id="34_t4xgw"]
+[ext_resource type="Texture2D" uid="uid://co2it33pr2v6j" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0029.png" id="35_n88g6"]
+[ext_resource type="Texture2D" uid="uid://cb2s07oghf284" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0030.png" id="36_vtrk6"]
+[ext_resource type="Texture2D" uid="uid://c84jbcavwd8yk" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0031.png" id="37_y7ako"]
+[ext_resource type="Texture2D" uid="uid://crxvubjqgljml" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0032.png" id="38_rkesf"]
+[ext_resource type="Texture2D" uid="uid://bkwhqsx3bjr7c" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0033.png" id="39_qkhxu"]
+[ext_resource type="Texture2D" uid="uid://bq35l2rc66pqu" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0034.png" id="40_g0cna"]
+[ext_resource type="Texture2D" uid="uid://6vix20ixajtd" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0035.png" id="41_cqnv3"]
+[ext_resource type="Texture2D" uid="uid://b7uqf4hdu7at3" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0036.png" id="42_b31ft"]
+[ext_resource type="Texture2D" uid="uid://uxy7pglerwpp" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0037.png" id="43_l4lq4"]
+[ext_resource type="Texture2D" uid="uid://cikyjlyg5oxig" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0038.png" id="44_bjj3v"]
+[ext_resource type="Texture2D" uid="uid://cy0i0yydvc26b" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0039.png" id="45_xlfi2"]
+[ext_resource type="Texture2D" uid="uid://c4en6iwni4u3l" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0040.png" id="46_dfip6"]
+[ext_resource type="Texture2D" uid="uid://dluikg7c1id6f" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0041.png" id="47_pvs4l"]
+[ext_resource type="Texture2D" uid="uid://b353clcg7ftap" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0042.png" id="48_lc047"]
+[ext_resource type="Texture2D" uid="uid://bcixecnwgygns" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0043.png" id="49_jhwsh"]
+[ext_resource type="Texture2D" uid="uid://bayjmv0asgf1i" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0044.png" id="50_rmvgf"]
+[ext_resource type="Texture2D" uid="uid://msg73s8porw6" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0045.png" id="51_si0un"]
+[ext_resource type="Texture2D" uid="uid://cvwual7grc4ti" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0046.png" id="52_pxxms"]
+[ext_resource type="Texture2D" uid="uid://q5cmbxtca775" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0047.png" id="53_nh8et"]
+[ext_resource type="Texture2D" uid="uid://cotble107hbod" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0048.png" id="54_hfpuh"]
+[ext_resource type="Texture2D" uid="uid://cryyfi2fnqfj1" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0049.png" id="55_j1tpg"]
+[ext_resource type="Texture2D" uid="uid://50cprfd82fks" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0050.png" id="56_04g6l"]
+[ext_resource type="Texture2D" uid="uid://bji0u28btpb2c" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0051.png" id="57_cerl6"]
+[ext_resource type="Texture2D" uid="uid://ciunx5hnrfycw" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0052.png" id="58_cfjl8"]
+[ext_resource type="Texture2D" uid="uid://cqp0regpxfe3h" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0053.png" id="59_hawup"]
+[ext_resource type="Texture2D" uid="uid://bves5o52ie1w1" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0054.png" id="60_55a6u"]
+[ext_resource type="Texture2D" uid="uid://bfmpmwljhm15v" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0055.png" id="61_6drge"]
+[ext_resource type="Texture2D" uid="uid://g5ypmdxe0knq" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0056.png" id="62_26wmf"]
+[ext_resource type="Texture2D" uid="uid://7348rg5iywsx" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0057.png" id="63_jwb2g"]
+[ext_resource type="Texture2D" uid="uid://64peim4g1717" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0058.png" id="64_0lvfg"]
+[ext_resource type="Texture2D" uid="uid://2b4usvk8i5ap" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0059.png" id="65_stise"]
+[ext_resource type="Texture2D" uid="uid://dha13vssd3vs6" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0060.png" id="66_3for0"]
+[ext_resource type="Texture2D" uid="uid://0b70ly20d2ge" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0061.png" id="67_denu8"]
+[ext_resource type="Texture2D" uid="uid://c1rjdn8g2ww6o" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0062.png" id="68_u74e3"]
+[ext_resource type="Texture2D" uid="uid://xmpkv6eyndub" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0063.png" id="69_3jwog"]
+[ext_resource type="Texture2D" uid="uid://qgp0c6nuglum" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0064.png" id="70_tw8m0"]
+[ext_resource type="Texture2D" uid="uid://bv4tjja4lbolg" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0065.png" id="71_tfpoi"]
+[ext_resource type="Texture2D" uid="uid://dqcpc6gswniq" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0066.png" id="72_1be1u"]
+[ext_resource type="Texture2D" uid="uid://qxk1mtcwyhui" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0067.png" id="73_8ik8e"]
+[ext_resource type="Texture2D" uid="uid://c5870yksjyncb" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0068.png" id="74_xdrs5"]
+[ext_resource type="Texture2D" uid="uid://cyr280orw18qn" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0069.png" id="75_6ndkp"]
+[ext_resource type="Texture2D" uid="uid://pfogmdehfrgw" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0070.png" id="76_sldlo"]
+[ext_resource type="Texture2D" uid="uid://cc7ltc13naxon" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0071.png" id="77_vdt1t"]
+[ext_resource type="Texture2D" uid="uid://7hy2dx75xl6" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0072.png" id="78_1rh1b"]
+[ext_resource type="Texture2D" uid="uid://c3ejf6rgitfd8" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0073.png" id="79_l31d1"]
+[ext_resource type="Texture2D" uid="uid://bke435lx2ase3" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0074.png" id="80_oj237"]
+[ext_resource type="Texture2D" uid="uid://cj006caje5bet" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0075.png" id="81_ltwaj"]
+[ext_resource type="Texture2D" uid="uid://ct7tmqocrejw0" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0076.png" id="82_0agsc"]
+[ext_resource type="Texture2D" uid="uid://vewglfltqy42" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0077.png" id="83_5nvpp"]
+[ext_resource type="Texture2D" uid="uid://digseegh2iojg" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0078.png" id="84_1da2p"]
+[ext_resource type="Texture2D" uid="uid://c7t6vaoi7veli" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0079.png" id="85_t2y85"]
+[ext_resource type="Texture2D" uid="uid://dfup4nxi4vb8n" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0080.png" id="86_scfqy"]
+[ext_resource type="Texture2D" uid="uid://rs4mxo3mqh78" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0081.png" id="87_1qn25"]
+[ext_resource type="Texture2D" uid="uid://wq1v6ea6ukxp" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0082.png" id="88_310dx"]
+[ext_resource type="Texture2D" uid="uid://dhpcsnboc1yk3" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0083.png" id="89_ko2b6"]
+[ext_resource type="Texture2D" uid="uid://dflyc4h7nvp1a" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0084.png" id="90_yon6i"]
+[ext_resource type="Texture2D" uid="uid://d1thhvkbd4idy" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0085.png" id="91_bg7ul"]
+[ext_resource type="Texture2D" uid="uid://b82ij4o6aspp8" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0086.png" id="92_tpc5k"]
+[ext_resource type="Texture2D" uid="uid://dgyv74vjcfx2a" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0087.png" id="93_uc86e"]
+[ext_resource type="Texture2D" uid="uid://c4t25juyu3k60" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0088.png" id="94_nubo8"]
+[ext_resource type="Texture2D" uid="uid://ejtgjnxmsjp3" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0089.png" id="95_1nlgl"]
+[ext_resource type="Texture2D" uid="uid://4putq5cmqjmw" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0090.png" id="96_fdquv"]
+[ext_resource type="Texture2D" uid="uid://ebc2t2ivuq47" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0091.png" id="97_ddbe4"]
+[ext_resource type="Texture2D" uid="uid://dt1pxxx7u8v2l" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0092.png" id="98_dqfrr"]
+[ext_resource type="Texture2D" uid="uid://c1di8dv7d7vet" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0093.png" id="99_1egqi"]
+[ext_resource type="Texture2D" uid="uid://baydpnabf1iqc" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0094.png" id="100_v2c0u"]
+[ext_resource type="Texture2D" uid="uid://c7mkifbg00bfo" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0095.png" id="101_712ue"]
+[ext_resource type="Texture2D" uid="uid://c3qmti7yak7a2" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0096.png" id="102_ppsnq"]
+[ext_resource type="Texture2D" uid="uid://eiulsrclfsfh" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0097.png" id="103_g8kjm"]
+[ext_resource type="Texture2D" uid="uid://clay4f4hcn334" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0098.png" id="104_5fe4p"]
+[ext_resource type="Texture2D" uid="uid://bplt50v3f2l31" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0099.png" id="105_kwut3"]
+[ext_resource type="AudioStream" uid="uid://cihmojecf4t5l" path="res://Assets/AudioClip/Characters/Baldi/BaldiTutor/BAL_Hi.wav" id="107_tmgrw"]
+
+[sub_resource type="Environment" id="Environment_oyo4y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kx7ku"]
+size = Vector3(2, 0.001, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cy3wg"]
+size = Vector3(2, 0.001, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0c5p"]
+shading_mode = 0
+albedo_texture = ExtResource("1_sf7w1")
+uv1_scale = Vector3(5, 5, 5)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_1ha6f"]
+size = Vector3(2, 0.001, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d783r"]
+shading_mode = 0
+albedo_texture = ExtResource("2_gtf7l")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0bkex"]
+size = Vector3(2, 2, 0.001)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3al7n"]
+size = Vector3(2, 2, 0.001)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i36u6"]
+shading_mode = 0
+albedo_texture = ExtResource("3_yy1ug")
+uv1_scale = Vector3(6, 6, 6)
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tqdvc"]
+size = Vector3(0.001, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h7osm"]
+size = Vector3(0.001, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrtm7"]
+shading_mode = 0
+albedo_texture = ExtResource("3_yy1ug")
+uv1_scale = Vector3(6, 6, 6)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am7bd"]
+shading_mode = 0
+albedo_texture = ExtResource("2_gtf7l")
+uv1_scale = Vector3(3, 2, 3)
+uv1_offset = Vector3(0, 0.5, 0)
+texture_filter = 0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m2w4i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("105_kwut3")
+}],
+"loop": true,
+"name": &"baldi_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_evg0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ck435")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gxccv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1n6ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4c8ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wt6lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pwnml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jqy1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wam05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_e8w2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3cqrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_m8htp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0poyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h0ydc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v434k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_br2cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ajqpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_37i54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ddaxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5owld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bapud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xtvai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_uilq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_miahk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a54xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4twpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_g4jvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0i5v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_t4xgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_n88g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_vtrk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y7ako")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_rkesf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qkhxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_g0cna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cqnv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_b31ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_l4lq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_bjj3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xlfi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_dfip6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_pvs4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_lc047")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_jhwsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_rmvgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_si0un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_pxxms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_nh8et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hfpuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_j1tpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_04g6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_cerl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_cfjl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_hawup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_55a6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_6drge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_26wmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_jwb2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_0lvfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_stise")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_3for0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_denu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_u74e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_3jwog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_tw8m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_tfpoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_1be1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_8ik8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_xdrs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_6ndkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_sldlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_vdt1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_1rh1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_l31d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_oj237")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_ltwaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_0agsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_5nvpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_1da2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_t2y85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_scfqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_1qn25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_310dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_ko2b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_yon6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_bg7ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_tpc5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_uc86e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_nubo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_1nlgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_fdquv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_ddbe4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_dqfrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_1egqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_v2c0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_712ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_ppsnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_g8kjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_5fe4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_kwut3")
+}],
+"loop": false,
+"name": &"baldi_wave",
+"speed": 28.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rj7tv"]
+height = 1.9
+
+[node name="School" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_oyo4y")
+
+[node name="MusicAudioSources" type="Node3D" parent="."]
+
+[node name="SchoolMusic" type="AudioStreamPlayer" parent="MusicAudioSources"]
+stream = ExtResource("1_igjfl")
+autoplay = true
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Pathway_Preview" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-07, -1.78814e-07, -10)
+visible = false
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Pathway_Preview"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pathway_Preview/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pathway_Preview/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Pathway_Preview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pathway_Preview/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pathway_Preview/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Pathway_Preview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pathway_Preview/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pathway_Preview/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Pathway_Preview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pathway_Preview/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pathway_Preview/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/Pathway_Preview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pathway_Preview/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pathway_Preview/Wall3"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/Pathway_Preview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Pathway_Preview/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Pathway_Preview/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Halls" type="Node3D" parent="Environment"]
+
+[node name="Hall_0Wall" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-07, -1.78814e-07, -2.38419e-07)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_0Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_0Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_0Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_0Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_0Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_0Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Hall_1Wall" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, -2.38419e-07)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_1Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_1Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_1Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_am7bd")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_1Wall/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1Wall/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_1Wall2" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -2.38419e-07)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_1Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_1Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_1Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_am7bd")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_1Wall2/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1Wall2/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2Wall" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-07, -1.78814e-07, -2)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall/Wall3"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2Wall4" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.78814e-07, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall4/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall4/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall4/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall4/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2Wall5" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall5/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall5/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall5/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall5/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall5/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall5/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall5/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall5/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2Wall6" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall6/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall6/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall6/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall6/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall6/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall6/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall6/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall6/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2Wall7" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.78814e-07, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall7/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall7/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall7/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall7/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall7/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall7/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_2Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2Wall7/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2Wall7/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2WallDoubleDoor" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.78814e-07, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2WallDoubleDoor2" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoubleDoor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoubleDoor2/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2WallDoor" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-07, -1.78814e-07, -4)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoor/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoor/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoor/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoor/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoor/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoor/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Hall_2WallDoor1" type="Node3D" parent="Environment/Halls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-07, -1.78814e-07, -6)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoor1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoor1/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoor1/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoor1/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoor1/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/Halls/Hall_2WallDoor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_2WallDoor1/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallDoor1/Wall3"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Entrances" type="Node3D" parent="Environment"]
+
+[node name="MainEntrance" type="Node3D" parent="Environment/Entrances"]
+
+[node name="ExitSign" type="Sprite3D" parent="Environment/Entrances/MainEntrance"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 1.75, 0)
+billboard = 2
+texture = ExtResource("5_a73jd")
+
+[node name="Entrance_Hall" type="Node3D" parent="Environment/Entrances/MainEntrance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-07, -1.78814e-07, 2)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Entrance_Hall1" type="Node3D" parent="Environment/Entrances/MainEntrance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, 2)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall1/Wall3"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Entrance_Hall2" type="Node3D" parent="Environment/Entrances/MainEntrance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, 2)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/MainEntrance/Entrance_Hall2/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="BaldiTutor" type="Node3D" parent="Characters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+script = ExtResource("6_2oibd")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/BaldiTutor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.92, -1)
+pixel_size = 0.0075
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_m2w4i")
+animation = &"baldi_wave"
+autoplay = "baldi_wave"
+
+[node name="BaldiTutorAudioSources" type="Node3D" parent="Characters/BaldiTutor"]
+
+[node name="BaldiTutorIntro" type="AudioStreamPlayer3D" parent="Characters/BaldiTutor/BaldiTutorAudioSources"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.92, -1)
+stream = ExtResource("107_tmgrw")
+autoplay = true
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02192, 2)
+script = ExtResource("2_qm1ke")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_rj7tv")
+metadata/_edit_lock_ = true
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+metadata/_edit_lock_ = true
+
+[connection signal="animation_finished" from="Characters/BaldiTutor/AnimatedSprite3D" to="Characters/BaldiTutor" method="_on_animated_sprite_3d_animation_finished"]
