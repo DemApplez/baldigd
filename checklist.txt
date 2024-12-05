@@ -7,6 +7,8 @@ Dem Apples' Personal Checklist Of Features And In The Order They Should Be Compl
 + Hallway layout
 - Room Layout
 - Continue Working On Entrances
+x Finalize Player Movement
+x Port Hud Elements
 x Get Doors To Function
 x Get Double Doors To Function
 x Get Furniture Models/Meshes To Work
