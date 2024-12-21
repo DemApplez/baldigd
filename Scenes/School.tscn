@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=3 uid="uid://dy2vrlm7gj1e0"]
+[gd_scene load_steps=148 format=3 uid="uid://dy2vrlm7gj1e0"]
 
 [ext_resource type="AudioStream" uid="uid://dvmetxhpertwd" path="res://Assets/AudioClip/Music/mus_School.wav" id="1_igjfl"]
 [ext_resource type="Texture2D" uid="uid://e6xtp1w4yoj4" path="res://Assets/Texture2D/SchoolHouse/FloorTextures/TileFloor.png" id="1_sf7w1"]
@@ -10,8 +10,12 @@
 [ext_resource type="Script" path="res://Scripts/BaldiTutor.gd" id="6_2oibd"]
 [ext_resource type="Texture2D" uid="uid://bmhbe72y2rrgu" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0000.png" id="6_evg0w"]
 [ext_resource type="Texture2D" uid="uid://0hq5pjrec6ix" path="res://Assets/Texture2D/SchoolHouse/WallTextures/Window.png" id="7_41hp4"]
+[ext_resource type="Script" path="res://Scripts/DoubleDoor.gd" id="7_bqblp"]
 [ext_resource type="Texture2D" uid="uid://du6mdhn1io770" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0001.png" id="7_ck435"]
+[ext_resource type="Texture2D" uid="uid://cwjau42cfgu5w" path="res://Assets/Texture2D/SchoolHouse/DoorTextures/SwingDoors/SwingDoor0.png" id="7_pqbln"]
+[ext_resource type="AudioStream" uid="uid://cfveofqbioexc" path="res://Assets/AudioClip/Sounds/Doors/swingdoor_open.wav" id="8_8bh7w"]
 [ext_resource type="Texture2D" uid="uid://dphxouxpeu0m2" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0002.png" id="8_gxccv"]
+[ext_resource type="Texture2D" uid="uid://ccu2gfujbsgia" path="res://Assets/Texture2D/SchoolHouse/DoorTextures/SwingDoors/SwingDoor60.png" id="8_uosh7"]
 [ext_resource type="Texture2D" uid="uid://bs24tib3jt7kl" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0003.png" id="9_1n6ol"]
 [ext_resource type="Texture2D" uid="uid://pfm6kwgwfgjy" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0004.png" id="10_4c8ly"]
 [ext_resource type="Texture2D" uid="uid://bl17ms4t1v8ti" path="res://Assets/Texture2D/Characters/Baldi/Baldi_Wave0005.png" id="11_wt6lc"]
@@ -171,6 +175,44 @@ uv1_scale = Vector3(3, 2, 3)
 uv1_offset = Vector3(0, 0.5, 0)
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2eucm"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("7_41hp4")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ksnpj"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("7_41hp4")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rybsb"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("7_41hp4")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_33upq"]
+size = Vector3(0.1, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8i7x"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("7_pqbln")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guped"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("8_uosh7")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6d11"]
 shading_mode = 0
 albedo_color = Color(0.352941, 0.352941, 0.352941, 1)
@@ -190,6 +232,15 @@ shading_mode = 0
 albedo_color = Color(0.351563, 0.351563, 0.351563, 1)
 albedo_texture = ExtResource("3_yy1ug")
 uv1_scale = Vector3(5, 4, 5)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4aa8i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yoec"]
+shading_mode = 0
+albedo_color = Color(0.351563, 0.351563, 0.351563, 1)
+albedo_texture = ExtResource("3_yy1ug")
+uv1_scale = Vector3(2, 2, 2)
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_um44o"]
@@ -213,11 +264,24 @@ albedo_texture = ExtResource("3_yy1ug")
 uv1_scale = Vector3(5, 4, 5)
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d735p"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("7_pqbln")
+uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nf5uj"]
 transparency = 1
 shading_mode = 0
 albedo_texture = ExtResource("7_41hp4")
 uv1_scale = Vector3(3, 2, 3)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_up7ir"]
+shading_mode = 0
+albedo_texture = ExtResource("3_yy1ug")
+uv1_scale = Vector3(2, 2, 2)
 texture_filter = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m2w4i"]
@@ -1036,7 +1100,7 @@ metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_1WallGroup/Hall_1Wall8/Wall1"]
 mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+surface_material_override/0 = SubResource("StandardMaterial3D_2eucm")
 metadata/_edit_lock_ = true
 
 [node name="Hall_1Wall9" type="Node3D" parent="Environment/Halls/Hall_1WallGroup"]
@@ -6480,7 +6544,7 @@ metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallGroup/Hall_2Wall103/Wall3"]
 mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ksnpj")
 metadata/_edit_lock_ = true
 
 [node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_2WallGroup/Hall_2Wall103"]
@@ -6580,7 +6644,7 @@ metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_2WallGroup/Hall_2Wall105/Wall3"]
 mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+surface_material_override/0 = SubResource("StandardMaterial3D_rybsb")
 metadata/_edit_lock_ = true
 
 [node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_2WallGroup/Hall_2Wall105"]
@@ -8113,6 +8177,46 @@ mesh = SubResource("BoxMesh_3al7n")
 surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
 metadata/_edit_lock_ = true
 
+[node name="DoubleDoor" type="Node3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor"]
+script = ExtResource("7_bqblp")
+
+[node name="DoorOpen" type="AudioStreamPlayer3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+stream = ExtResource("8_8bh7w")
+
+[node name="DoorCollisionDetection" type="Area3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor/DoorCollisionDetection"]
+shape = SubResource("BoxShape3D_33upq")
+
+[node name="DoubleDoorClosed" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor/DoubleDoorClosed"]
+shape = SubResource("BoxShape3D_tqdvc")
+disabled = true
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor/DoubleDoorClosed"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_v8i7x")
+metadata/_edit_lock_ = true
+
+[node name="DoubleDoorOpen" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor/DoubleDoorOpen"]
+shape = SubResource("BoxShape3D_tqdvc")
+disabled = true
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor/DoubleDoorOpen"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_guped")
+metadata/_edit_lock_ = true
+
 [node name="Hall_2WallDoubleDoor2" type="Node3D" parent="Environment/Halls/Hall_SectionsWithDoors"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, 0)
 
@@ -8845,40 +8949,40 @@ mesh = SubResource("BoxMesh_h7osm")
 surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
 metadata/_edit_lock_ = true
 
-[node name="Hall_2WallDetentDoor" type="Node3D" parent="Environment/Halls/Hall_SectionsWithDoors"]
+[node name="Hall_2WallPrincipalDoor" type="Node3D" parent="Environment/Halls/Hall_SectionsWithDoors"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, -32)
 
-[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor"]
+[node name="Floor" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor/Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor/Floor"]
 shape = SubResource("BoxShape3D_kx7ku")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor/Floor"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor/Floor"]
 mesh = SubResource("BoxMesh_cy3wg")
 surface_material_override/0 = SubResource("StandardMaterial3D_m0c5p")
 metadata/_edit_lock_ = true
 
-[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor"]
+[node name="Ceiling" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor/Ceiling"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor/Ceiling"]
 shape = SubResource("BoxShape3D_kx7ku")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor/Ceiling"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor/Ceiling"]
 mesh = SubResource("BoxMesh_1ha6f")
 surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
 metadata/_edit_lock_ = true
 
-[node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor"]
+[node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor/Wall4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor/Wall4"]
 shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDetentDoor/Wall4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallPrincipalDoor/Wall4"]
 mesh = SubResource("BoxMesh_h7osm")
 surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
 metadata/_edit_lock_ = true
@@ -8969,8 +9073,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_wi5cj")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened2" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9019,8 +9124,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened2/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_wi5cj")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened3" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9069,8 +9175,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened3/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_wi5cj")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened4" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9119,8 +9226,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened4/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_wi5cj")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened5" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9169,8 +9277,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened5/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_wi5cj")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_CornerDarkened" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9207,8 +9316,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_CornerDarkened/Wall1"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Wall4" type="StaticBody3D" parent="Environment/Halls/Hall_Special/Hall_CornerDarkened"]
@@ -9257,8 +9367,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened6/Wall1"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened6"]
@@ -9307,8 +9418,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened7/Wall1"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened7"]
@@ -9319,8 +9431,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened7/Wall2"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened8" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9357,8 +9470,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened8/Wall1"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened8"]
@@ -9369,8 +9483,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened8/Wall2"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened9" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9407,8 +9522,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened9/Wall1"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Wall2" type="StaticBody3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened9"]
@@ -9419,8 +9535,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened9/Wall2"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_CornerDarkened2" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9457,8 +9574,9 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_CornerDarkened2/Wall2"]
-mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Wall3" type="StaticBody3D" parent="Environment/Halls/Hall_Special/Hall_CornerDarkened2"]
@@ -9519,8 +9637,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened10/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened11" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9569,8 +9688,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened11/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened12" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9619,8 +9739,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened12/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Hall_2WallDarkened13" type="Node3D" parent="Environment/Halls/Hall_Special"]
@@ -9669,8 +9790,9 @@ shape = SubResource("BoxShape3D_tqdvc")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Halls/Hall_Special/Hall_2WallDarkened13/Wall4"]
-mesh = SubResource("BoxMesh_h7osm")
-surface_material_override/0 = SubResource("StandardMaterial3D_xxy6o")
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yoec")
 metadata/_edit_lock_ = true
 
 [node name="Entrances" type="Node3D" parent="Environment"]
@@ -9717,7 +9839,7 @@ metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Entrances/SouthEntrance/Entrance_Hall/Wall2"]
 mesh = SubResource("BoxMesh_3al7n")
-surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+surface_material_override/0 = SubResource("StandardMaterial3D_d735p")
 metadata/_edit_lock_ = true
 
 [node name="Entrance_Hall1" type="Node3D" parent="Environment/Entrances/SouthEntrance"]
@@ -11028,6 +11150,2040 @@ shape = SubResource("BoxShape3D_0bkex")
 metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/SpellingRoom/Room_1Wall5/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="ScienceRoom" type="Node3D" parent="Environment"]
+
+[node name="Room_0Wall26" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -24)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall26/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall26/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall26/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall26/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall27" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -24)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall27/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall27/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall27/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall27/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall28" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, -24)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall28/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall28/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall28/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall28/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall29" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.78814e-07, -24)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall29/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall29/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall29/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall29/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall30" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.78814e-07, -24)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall30/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall30/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall30/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall30/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall31" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -22)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall31"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall31/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall31/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall31/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall31/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall32" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -22)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall32"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall32/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall32/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall32/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall32/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall33" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, -22)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall33"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall33/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall33/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall33/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall33/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall34" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.78814e-07, -22)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall34"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall34/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall34/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall34/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall34/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall35" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.78814e-07, -22)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall35"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall35/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall35/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall35/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall35/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall36" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -20)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall36"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall36/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall36/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall36/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall36/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall37" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -20)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall37"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall37/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall37/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall37/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall37/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall38" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, -20)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall38"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall38/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall38/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall38/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall38/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall39" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.78814e-07, -20)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall39"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall39/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall39/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall39/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall39/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall40" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.78814e-07, -20)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall40"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall40/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall40/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall40/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall40/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall41" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -18)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall41"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall41/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall41/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall41/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall41/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall42" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -18)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall42"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall42/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall42/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall42/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall42/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall43" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, -18)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall43"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall43/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall43/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall43/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall43/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall44" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.78814e-07, -18)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall44"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall44/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall44/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall44/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall44/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall45" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.78814e-07, -18)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall45"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall45/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall45/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_0Wall45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_0Wall45/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_0Wall45/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -16)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall2" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -16)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall2/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall2/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall3" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1.78814e-07, -16)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall3/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall3/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall4" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.78814e-07, -16)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall4/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall4/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall5" type="Node3D" parent="Environment/ScienceRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.78814e-07, -16)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall5/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall5/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall5/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall5/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/ScienceRoom/Room_1Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ScienceRoom/Room_1Wall5/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ScienceRoom/Room_1Wall5/Wall2"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="EnglishRoom" type="Node3D" parent="Environment"]
+
+[node name="Room_0Wall46" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -42)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall46"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall46/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall46/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall46/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall46/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall47" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -42)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall47"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall47/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall47/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall47/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall47/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall48" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.78814e-07, -42)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall48"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall48/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall48/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall48/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall48/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall49" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -44)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall49"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall49/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall49/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall49/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall49/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall50" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -44)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall50"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall50/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall50/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall50/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall50/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall51" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.78814e-07, -44)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall51"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall51/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall51/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall51/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall51/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall52" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -46)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall52"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall52/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall52/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall52/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall52/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall53" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -46)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall53"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall53/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall53/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall53/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall53/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall54" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.78814e-07, -46)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall54"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall54/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall54/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_0Wall54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_0Wall54/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_0Wall54/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.78814e-07, -42)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall2" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.78814e-07, -44)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall2/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall2/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall3" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.78814e-07, -46)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1Wall3/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1Wall3/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -42)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided2" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -44)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided2/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided2/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided3" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -46)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided3/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided3/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided4" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -40)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided4/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided4/Wall2"]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided5" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -40)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided5/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided5/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided5/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided5/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided5/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided5/Wall2"]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided6" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1.78814e-07, -40)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided6/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided6/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided6/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided6/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/EnglishRoom/Room_1WallOneSided6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_1WallOneSided6/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_1WallOneSided6/Wall2"]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_CornerOneSided" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -40)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Wall2"]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_CornerOneSided2" type="Node3D" parent="Environment/EnglishRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1.78814e-07, -40)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Wall2"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Wall2"]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/EnglishRoom/Room_CornerOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/EnglishRoom/Room_CornerOneSided2/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="PrincipalsOffice" type="Node3D" parent="Environment"]
+
+[node name="Room_0Wall" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall2" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall3" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall4" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall5" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall5/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall5/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall5/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall5/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall6" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall6/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall6/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall6/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall6/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall7" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall7/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall7/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall7/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall7/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall8" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall8/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall8/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall8/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall8/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall9" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall9/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall9/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall9/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall9/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall10" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall10/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall10/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall10/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall10/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall11" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall11/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall11/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall11/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall11/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall12" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall12/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall12/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_0Wall12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_0Wall12/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_0Wall12/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall2" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall2/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall2/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall3" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1Wall3/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1Wall3/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided2" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided2/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided3" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided3/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1WallOneSided4" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_1WallOneSided4/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_CornerOneSided" type="Node3D" parent="Environment/PrincipalsOffice"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Wall3"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Wall3"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/PrincipalsOffice/Room_CornerOneSided/Wall1"]
 mesh = SubResource("BoxMesh_3al7n")
 surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
 metadata/_edit_lock_ = true
@@ -13060,6 +15216,1066 @@ mesh = SubResource("BoxMesh_h7osm")
 surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
 metadata/_edit_lock_ = true
 
+[node name="FacultyRoom2" type="Node3D" parent="Environment"]
+
+[node name="Room_0Wall" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall2" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall3" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall4" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall5" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall5/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall5/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall5/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall5/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall6" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall6/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall6/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall6/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall6/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall7" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall7/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall7/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall7/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall7/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall8" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall8/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall8/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall8/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall8/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall9" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall9/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall9/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall9/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall9/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall10" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall10/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall10/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall10/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall10/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall11" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall11/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall11/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall11/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall11/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall12" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall12/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall12/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall12/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall12/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall13" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall13/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall13/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall13/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall13/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall14" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall14/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall14/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall14/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall14/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall15" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall15/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall15/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall15/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall15/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall16" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall16/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall16/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall16/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall16/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall17" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall17/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall17/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall17/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall17/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall18" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall18/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall18/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall18/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall18/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall19" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall19/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall19/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall19/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall19/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall20" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall20/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall20/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall20/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall20/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall21" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall21/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall21/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall21/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall21/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall22" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall22/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall22/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall22/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall22/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall23" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall23/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall23/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall23/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall23/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_0Wall24" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall24/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall24/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_0Wall24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_0Wall24/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_0Wall24/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -28)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall2" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -30)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall2/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall2/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall3" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -32)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall3/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall3/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall3/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall3/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall3/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall3/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall4" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -34)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall4/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall4/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall4/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall4/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall4/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall4/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall5" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall5/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall5/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall5/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall5/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall5/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall5/Wall1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall6" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall6/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall6/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall6/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall6/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall6/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall6/Wall1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall7" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall7/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall7/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall7/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall7/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall7/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall7/Wall1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall8" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall8/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall8/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall8/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall8/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall8/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall8/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall9" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall9/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall9/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall9/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall9/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall9/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall9/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_1Wall10" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall10/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall10/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall10/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall10/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_1Wall10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_1Wall10/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_1Wall10/Wall1"]
+mesh = SubResource("BoxMesh_3al7n")
+surface_material_override/0 = SubResource("StandardMaterial3D_i36u6")
+metadata/_edit_lock_ = true
+
+[node name="Room_Corner2" type="Node3D" parent="Environment/FacultyRoom2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.78814e-07, -36)
+
+[node name="Floor" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_Corner2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_Corner2/Floor"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_Corner2/Floor"]
+mesh = SubResource("BoxMesh_cy3wg")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuoja")
+metadata/_edit_lock_ = true
+
+[node name="Ceiling" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_Corner2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_Corner2/Ceiling"]
+shape = SubResource("BoxShape3D_kx7ku")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_Corner2/Ceiling"]
+mesh = SubResource("BoxMesh_1ha6f")
+surface_material_override/0 = SubResource("StandardMaterial3D_d783r")
+metadata/_edit_lock_ = true
+
+[node name="Wall1" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_Corner2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_Corner2/Wall1"]
+shape = SubResource("BoxShape3D_0bkex")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_Corner2/Wall1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4aa8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_up7ir")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Environment/FacultyRoom2/Room_Corner2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.26326e-13)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FacultyRoom2/Room_Corner2/Wall4"]
+shape = SubResource("BoxShape3D_tqdvc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/FacultyRoom2/Room_Corner2/Wall4"]
+mesh = SubResource("BoxMesh_h7osm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrtm7")
+metadata/_edit_lock_ = true
+
 [node name="Characters" type="Node3D" parent="."]
 
 [node name="BaldiTutor" type="Node3D" parent="Characters"]
@@ -13067,8 +16283,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 script = ExtResource("6_2oibd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/BaldiTutor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.92, -1)
-pixel_size = 0.0075
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.775, -1)
+pixel_size = 0.0063
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_m2w4i")
@@ -13093,4 +16309,5 @@ shape = SubResource("CapsuleShape3D_rj7tv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02192, 0)
 metadata/_edit_lock_ = true
 
+[connection signal="body_entered" from="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor/DoorCollisionDetection" to="Environment/Halls/Hall_SectionsWithDoors/Hall_2WallDoubleDoor/DoubleDoor" method="_on_area_3d_body_entered"]
 [connection signal="animation_finished" from="Characters/BaldiTutor/AnimatedSprite3D" to="Characters/BaldiTutor" method="_on_animated_sprite_3d_animation_finished"]
