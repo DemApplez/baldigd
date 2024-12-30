@@ -16283,8 +16283,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
 script = ExtResource("6_2oibd")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/BaldiTutor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.775, -1)
-pixel_size = 0.0063
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.787, -1)
+pixel_size = 0.0064
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_m2w4i")
